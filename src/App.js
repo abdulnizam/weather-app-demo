@@ -18,11 +18,11 @@ const App = () => {
       const location = await axios.get("http://ip-api.com/json");
       const { lat, lon } = location.data;
       const weather = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ce496a1edaf9f933742ece6ea52aad64&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=xxxxxxx&units=metric`
       );
       setWeather(weather.data);
       const image = await axios.get(
-        `https://api.unsplash.com/search/photos?query=${weather.data.name}&client_id=nIcfKA-9A7lphsawDilSIjAHWeS_Un1QzxTV3p3_HKU`
+        `https://api.unsplash.com/search/photos?query=${weather.data.name}&client_id=xxxxx`
       );
       setImage(image.data.results[0].urls.small);
       const description = await axios.get(
